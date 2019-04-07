@@ -1,9 +1,10 @@
 # url()関数のインポート
-from django.conf.urls import url
-
+from django.urls import path
 from . import views
+
+app_name = 'item'
 
 # ルーティングの設定
 urlpatterns = [
-	url(r'^hello/$,', views.hello, name='hello'),
+	path('', views.hello, name='hello'),
 ]

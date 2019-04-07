@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+# hello()関数
+def hello(request):
+	return HttpResponse('hello world')
+
+def index(request):
+	pass
