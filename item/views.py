@@ -1,8 +1,4 @@
-from django.http import HttpResponse
+from django.views import generic
 
-# hello()関数
-def hello(request):
-	return HttpResponse('hello world')
-
-def index(request):
-	pass
+class IndexView(generic.TemplateView):
+	template_name = 'item/item_list.html'

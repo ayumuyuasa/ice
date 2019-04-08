@@ -6,5 +6,5 @@ app_name = 'item'
 
 # ルーティングの設定
 urlpatterns = [
-	path('', views.hello, name='hello'),
+	path('', views.IndexView.as_view(), name='index'),
 ]
