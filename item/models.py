@@ -10,10 +10,10 @@ class Maker(models.Model):
 
 class Item(models.Model):
 	ice_name = models.CharField('名称', max_length=255)
-	description = models.TextField('説明', max_length=1000, null=True)
+	description = models.TextField('説明', max_length=1000, blank=True)
 	price = models.CharField('価格', max_length=255)
 	amount = models.CharField('内容量', max_length=255)
-	image = models.CharField('商品画像', max_length=255)
+	image = models.URLField('画像', max_length=200)
 	maker = models.ForeignKey(
 		Maker, verbose_name='メーカー', on_delete=models.PROTECT,
 		)

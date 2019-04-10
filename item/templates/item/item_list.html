@@ -2,4 +2,28 @@
 
 {% block content %}
 <h1>アイスクリーム一覧</h1>
+<table class="table table-bordered mt-5">
+  <thead>
+    <tr>
+      <th>商品画像</th>
+      <th>商品名</th>
+      <th>商品説明</th>
+      <th>メーカー名</th>
+      <th>価格</th>
+      <th>内容量</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for item in item_list %}
+    <tr>
+      <td>{{ item.image }}</td>
+      <td>{{ item.ice_name }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.maker }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.amount }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
